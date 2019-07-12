@@ -1,5 +1,5 @@
 <h2>
-    表单使用 inline 模式，通过设置官方样式解决布局被打乱的问题
+    表单使用 horizontal 模式，一个 item 中有4组 control
 </h2>
 <!-- 工具栏 -->
 <div>
@@ -32,100 +32,95 @@
   <!-- 主表表单 style="background-color: burlywood"-->
   <form
     nz-form 
-    [nzLayout]="'inline'"
+    [nzLayout]="'horizontal'"
     [formGroup]="mainForm"
     (ngSubmit)="submitForm()"
   >
   
     <nz-form-item>
-      <nz-form-label [nzSpan]="7">单据编号</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+      <nz-form-label [nzSpan]="2">单据编号</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <input nz-input formControlName="codeid" placeholder="自动生成" />
       </nz-form-control>
-    </nz-form-item>
+    
   
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">单据日期</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+    
+      <nz-form-label [nzSpan]="2">单据日期</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <nz-date-picker formControlName="billdate" placeholder="单据日期"
           (ngModelChange)="onChangeBilldate($event)"></nz-date-picker>
       </nz-form-control>
-    </nz-form-item>
+    
   
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">交期</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+    
+      <nz-form-label [nzSpan]="2">交期</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <nz-date-picker formControlName="deliverytime" placeholder="交期"
           (ngModelChange)="onChangeDeliverytime($event)"></nz-date-picker>
       </nz-form-control>
-    </nz-form-item>
   
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">客户</nz-form-label>
-      <nz-form-control>
+    
+      <nz-form-label [nzSpan]="2">客户</nz-form-label>
+      <nz-form-control [nzSpan]="4" >
         <!-- <input nz-input formControlName="clientid" placeholder="客户" /> -->
   
-        <nz-select formControlName="clientid" placeholder="客户">
+        <nz-select placeholder="客户">
           <nz-option nzValue="Option 1" nzLabel="Option 1"></nz-option>
           <nz-option nzValue="Option 2" nzLabel="Option 2"></nz-option>
         </nz-select>
   
       </nz-form-control>
     </nz-form-item>
+
+
+
+
   
     <nz-form-item >
-      <nz-form-label [nzSpan]="7">合同号码</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+      <nz-form-label [nzSpan]="2">合同号码</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <input nz-input formControlName="pactcode" placeholder="合同号码" />
       </nz-form-control>
-    </nz-form-item>
   
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">接单抬头</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+    
+      <nz-form-label [nzSpan]="2">接单抬头</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <input nz-input formControlName="contractor" placeholder="接单抬头" />
       </nz-form-control>
-    </nz-form-item>
   
   
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">销售类型</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+    
+      <nz-form-label [nzSpan]="2">销售类型</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <input nz-input formControlName="salecategory" placeholder="销售类型" />
       </nz-form-control>
-    </nz-form-item>
   
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">结算方式</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+      <nz-form-label [nzSpan]="2">结算方式</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <input nz-input formControlName="settlement" placeholder="结算方式" />
       </nz-form-control>
     </nz-form-item>
-  
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">交货方式</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+
+
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="2">交货方式</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <input nz-input formControlName="deliverytype" placeholder="交货方式" />
       </nz-form-control>
-    </nz-form-item>
   
-    <nz-form-item >
-      <nz-form-label [nzSpan]="7">包装方式</nz-form-label>
-      <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+      <nz-form-label [nzSpan]="2">包装方式</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
         <input nz-input formControlName="packmanner" placeholder="包装方式" />
       </nz-form-control>
-    </nz-form-item>
   
   
-    <nz-form-item >
-        <nz-form-label [nzSpan]="7">备注</nz-form-label>
-        <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
+        <nz-form-label [nzSpan]="2">备注</nz-form-label>
+        <nz-form-control [nzSpan]="4" nzErrorTip="必填项">
           <input nz-input formControlName="remark" placeholder="备注" />
         </nz-form-control>
-      </nz-form-item>
     
-    <nz-form-item>
-      <nz-form-control [nzSpan]="14" [nzOffset]="44">
+      <nz-form-control [nzSpan]="6" [nzOffset]="44">
         <button nz-button nzType="primary">保存</button>
       </nz-form-control>
     </nz-form-item>
