@@ -5,3 +5,18 @@
 nz-option {
     width:100%;
 } */
+
+/* *
+ * 通过设置下面两个样式的宽度解决 nz-select 打乱 form 布局的问题
+ * 实际应该使用 horizontal 模式，一个 nz-form-item 中放置4个 label 和 4个 control
+ * 因为一个 item 相当于一行
+ */
+/* nz-form-control 外围类*/
+.ant-form-item-control-wrapper{
+    width: 152.16px;
+}
+
+/* nz-form-item 样式类*/
+.ant-form-item{
+    width: 221.2px;
+}

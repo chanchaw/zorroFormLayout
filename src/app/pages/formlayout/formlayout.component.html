@@ -26,8 +26,8 @@
   </div>&nbsp;
   
   
-  <!-- 主表表单 -->
-  <form style="background-color: burlywood"
+  <!-- 主表表单 style="background-color: burlywood"-->
+  <form
     nz-form 
     [nzLayout]="'inline'"
     [formGroup]="mainForm"
@@ -59,7 +59,7 @@
   
     <nz-form-item >
       <nz-form-label [nzSpan]="7">客户</nz-form-label>
-      <nz-form-control style="width:200px">
+      <nz-form-control>
         <!-- <input nz-input formControlName="clientid" placeholder="客户" /> -->
   
         <nz-select formControlName="clientid" placeholder="客户">
@@ -69,7 +69,7 @@
   
       </nz-form-control>
     </nz-form-item>
-  <!-- 
+  
     <nz-form-item >
       <nz-form-label [nzSpan]="7">合同号码</nz-form-label>
       <nz-form-control [nzSpan]="17" nzErrorTip="必填项">
@@ -125,6 +125,6 @@
       <nz-form-control [nzSpan]="14" [nzOffset]="44">
         <button nz-button nzType="primary">保存</button>
       </nz-form-control>
-    </nz-form-item> -->
+    </nz-form-item>
   </form>
   

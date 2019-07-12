@@ -15,7 +15,9 @@ export class FormlayoutComponent implements OnInit {
 
   ngOnInit() {
     this.mainForm = this.fb.group({
-      codeid:[null],billdate:[null],deliverytime:[null],clientid:[null]
+      codeid:[null],billdate:[null],deliverytime:[null],clientid:[null],
+      pactcode:[null],contractor:[null],salecategory:[null],settlement:[null],
+      deliverytype:[null],packmanner:[null],remark:[null]
     });
   }
 
