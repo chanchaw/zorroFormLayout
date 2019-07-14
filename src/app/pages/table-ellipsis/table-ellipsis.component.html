@@ -1,0 +1,79 @@
+  <!-- 
+    明细表，标准样式下，汉字个数对应的 px 数值：
+    2 = 65px,3 = 75px,4 = 90px,,,,,,,,
+  
+  -->
+<nz-table #editRowTable nzBordered [nzData]="details" [nzSize]="small"
+    [nzScroll]="{ x: '1300px' }">
+      <thead>
+      <tr>
+          <th nzWidth = "10px">序号</th>
+          <th nzWidth = "75px">订单号</th>
+          <th nzWidth = "90px">源订单号</th>
+          <th nzWidth = "65px">款号</th>
+          <th nzWidth = "100px" style="max-height:50px">品名</th>
+          <th nzWidth = "65px">门幅</th>
+          <th nzWidth = "65px">克重</th>
+          <th nzWidth = "90px">颜色示例</th>
+          <th nzWidth = "65px">色号</th>
+          <th nzWidth = "65px">颜色</th>
+          <th nzWidth = "65px">公斤</th>
+          <th nzWidth = "65px">米数</th>
+          <th nzWidth = "65px">码数</th>
+          <th nzWidth = "65px">单价</th>
+          <th nzWidth = "65px">金额</th>
+          <th nzWidth = "90px">计价单位</th>
+          <th nzWidth = "75px">制版费</th>
+          <th nzWidth = "75px">中样费</th>
+  
+          <th nzWidth="65px">操作</th>
+          <!-- <th nzWidth="65px" nzRight="0px">操作</th> -->
+      </tr>
+      </thead>
+      <tbody>
+  
+  
+      <!-- 数据行 -->
+      <tr *ngFor="let data of editRowTable.data; let index = index">
+          <td>{{ index + 1 }}</td>
+
+          <td>{{ data.ordercode }}</td>
+          
+          <td>{{ data.oordercode }}</td>
+
+          <td>{{ data.stylecode }}</td>
+
+          <td style="max-height:50px">{{ data.goodsname }}</td>
+          
+          <td>{{ data.spec01 }}</td>
+
+          <td>{{ data.spec02 }}</td>
+  
+          <td>{{ data.color }}</td>
+          
+          <td>{{ data.colorcode }}</td>
+  
+          <td>{{ data.colorname }}</td>
+  
+          <td>{{ data.kg }}</td>
+  
+          <td>{{ data.meter }}</td>
+  
+          <td>{{ data.yard }}</td>
+  
+          <td>{{ data.price }}</td>
+  
+          <td>{{ data.amount }}</td>
+  
+          <td>{{ data.chargeunit }}</td>
+  
+          <td>{{ data.platemake }}</td>
+  
+          <td>{{ data.sample }}</td>
+
+  
+  
+      </tr>
+  
+      </tbody> 
+  </nz-table>
