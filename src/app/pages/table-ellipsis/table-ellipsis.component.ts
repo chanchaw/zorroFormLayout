@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TableEllipsisComponent implements OnInit {
 
   details:any[] =[];
+
+  widthOrdercode:string="60px";
   constructor(
   ) { }
 
@@ -26,6 +28,13 @@ export class TableEllipsisComponent implements OnInit {
     ]
   }
 
+  c60(){
+    this.widthOrdercode = "60px";
+  }
+
+  c100(){
+    this.widthOrdercode = "100px";
+  }
 }
 
 

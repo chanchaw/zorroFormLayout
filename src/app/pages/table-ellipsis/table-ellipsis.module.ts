@@ -5,6 +5,8 @@ import { TableEllipsisRoutingModule } from './table-ellipsis-routing.module';
 import { TableEllipsisComponent } from './table-ellipsis.component';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
+
+
 @NgModule({
   declarations: [TableEllipsisComponent],
   imports: [
