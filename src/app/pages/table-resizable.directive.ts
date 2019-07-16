@@ -21,7 +21,7 @@ export class TableResizableDirective implements AfterViewInit {
       if (!result.tHead) throw new TypeError('Must have a THEAD element');
       return result;
     })();
-    
+
     el.classList.add('table-resizable');
     const tr = el.tHead.rows[0];
     if (!tr) throw new TypeError('Must have at least one TR element inside THEAD element');
@@ -41,6 +41,7 @@ export class TableResizableDirective implements AfterViewInit {
       }
 
       ths.forEach(th => {
+        console.log("进入了 table-resizable.directive.ts 内的 forEach");
         if (th.classList.contains('no-resize')) return;
         if (this.columnWidths[th.cellIndex]) {
           th.width = this.columnWidths[th.cellIndex];
